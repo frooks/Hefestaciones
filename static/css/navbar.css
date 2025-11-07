@@ -2,6 +2,9 @@
   .navbar-default .navbar-collapse {
     width:190px; 
   }
+  .intro-header .site-heading h1 {
+    font-size: 42px;
+}
 }
 
 .side-catalog .catalog-body li a {
@@ -12,6 +15,3 @@
     width: 300px;
 }
 
-.intro-header .site-heading h1 {
-    font-size: 45px;
-}
