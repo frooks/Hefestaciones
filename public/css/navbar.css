@@ -1,0 +1,15 @@
+@media only screen and (max-width:767px) {
+  .navbar-default .navbar-collapse {
+    width:190px; 
+  }
+}
+
+.side-catalog .catalog-body li a {
+    max-width: 290px;
+}
+
+.side-catalog {
+    width: 300px;
+}
+
+ 

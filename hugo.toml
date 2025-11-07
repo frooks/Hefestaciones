@@ -1,0 +1,82 @@
+baseURL = 'https://hefestaciones.io/'
+languageCode = 'es-es'
+title = "Hefestaciones"
+theme = "hugo-theme-cleanwhite"
+timeZone = "Europe/Madrid"
+defaultContentLanguage = "es"
+[languages]
+  [languages.es]
+    languageName = "Español"
+    weight = 1
+[params]
+  # Include any custom CSS and/or JS files, url or relative to /static folder
+  custom_css = ["css/navbar.css"]
+  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+  header_image = "/img/home-bg-unix-linux.png"
+  SEOTitle = "Recomendaciones y reflexiones de un cibersurfeador de regalo"
+  description = "Recomendaciones y reflexiones de un cibersurfeador"
+  keyword = "Aprender Java Barcelona, Aprender Java Madrid, Recomendaciones Tech"
+  slogan = "¡Si lo ves aquí es porque es bueno!"
+  upstreamAttribution = false
+  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer" 
+  sidebar_avatar = "/img/post-bg-unix-linux.jpg"      
+  #[[params.additional_menus]]
+    #title =  "ARCHIVE"
+    #href =  "/archive/"
+  #[[params.additional_menus]]
+    #title =  "NOTES"
+    #href =  "/notes/"
+  [[params.additional_menus]]
+    title =  "QUIEN SOY YO"
+    href =  "/about/"
+  friends = true
+  bookmarks = false
+  about_me = true
+  [params.social]
+  rss            = true 
+  email          = "edgarga.bdn@gmail.com"
+  #facebook      = "full profile url in facebook"
+  #googleplus    = "full profile url in googleplus"
+  #twitter       = "full profile url in twitter"
+  linkedin       = "https://www.linkedin.com/in/edgar-galcer%C3%A1n-acosta-531a69138/"
+  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #instagram     = "full profile url in instagram"
+  #github         = "https://github.com/yourgithub"
+  #wechat         = "your wechat qr code image"
+  #medium        = "full profile url in medium"
+  #slack         = "full workspace url in slack"
+  #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #xing          = "https://www.xing.com/profile/yourxingid"
+  #git           = "full profile url for git user"
+  # Last posts
+  last_posts = true
+  last_posts_title = "Ultimos posts"
+  last_posts_count = 5
+  
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+    [mediaTypes]
+      [mediaTypes.'font/woff']
+        suffixes = ['woff']
+      [mediaTypes.'font/woff2']
+        suffixes = ['woff2']
+
+  
