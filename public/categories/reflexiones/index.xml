@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reflexiones on Hefestaciones</title>
+    <link>http://localhost:1313/categories/reflexiones/</link>
+    <description>Recent content in Reflexiones on Hefestaciones</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/reflexiones/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Como sera el Java del futuro?</title>
+      <link>http://localhost:1313/2025/11/08/futuro-de-java/</link>
+      <pubDate>Fri, 07 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/2025/11/08/futuro-de-java/</guid>
+      <description>&lt;h1 id=&#34;que-le-depara-a-java&#34;&gt;¿Que le depara a Java?&lt;/h1&gt;&#xA;&lt;p&gt;Una vision hacia el futuro de java bla bla bla&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
