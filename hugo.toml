@@ -1,4 +1,4 @@
-baseURL = 'https://hefestaciones.pages.dev/'
+baseURL = 'https://hefestaciones.com/'
 languageCode = 'es-es'
 title = "Hefestaciones"
 theme = "hugo-theme-cleanwhite"
