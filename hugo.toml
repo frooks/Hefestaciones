@@ -4,11 +4,15 @@ title = "Hefestaciones"
 theme = "hugo-theme-cleanwhite"
 timeZone = "Europe/Madrid"
 defaultContentLanguage = "es"
+[pagination]
+  pagerSize = 5 # frontpage pagination
 [languages]
   [languages.es]
     languageName = "Español"
     weight = 1
 [params]
+  featured_tags = true 
+  featured_condition_size = 1 
   # Include any custom CSS and/or JS files, url or relative to /static folder
   custom_css = ["css/navbar.css"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
