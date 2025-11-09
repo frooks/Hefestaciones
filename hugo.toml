@@ -32,7 +32,7 @@ defaultContentLanguage = "es"
     #href =  "/notes/"
   [[params.additional_menus]]
     title =  "QUIEN SOY YO"
-    href =  "/about/"
+    href =  "/about"
   friends = false
   bookmarks = false
   about_me = false
