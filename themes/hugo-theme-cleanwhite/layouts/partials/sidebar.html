@@ -218,11 +218,11 @@
         </ul>
     </section>
     {{ end }}
-    <!-- TAGS -->
+    <!-- POSTS POR CATEGORIA -->
     {{ if .Site.Params.featured_tags }}
     <section>
         <hr class="hidden-sm hidden-xs">
-        <h5>TAGS</h5>
+        <h5>POSTS POR CATEGORIA</h5>
         <div class="tags">
             {{ $featured_condition_size := .Site.Params.featured_condition_size }}
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
