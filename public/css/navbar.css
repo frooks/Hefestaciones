@@ -1,17 +1,25 @@
 @media only screen and (max-width:767px) {
-  .navbar-default .navbar-collapse {
-    width:190px; 
-  }
-  .intro-header .site-heading h1 {
-    font-size: 42px;
-}
+   .navbar-default .navbar-collapse {
+      width: 190px;
+   }
+
+   .intro-header .site-heading h1 {
+      font-size: 42px;
+   }
 }
 
 .side-catalog .catalog-body li a {
-    max-width: 290px;
+   max-width: 290px;
 }
 
 .side-catalog {
-    width: 300px;
+   width: 300px;
 }
 
+th {
+   text-align: center;
+}
+
+.tags {
+   text-transform: capitalize;
+}

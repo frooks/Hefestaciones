@@ -33,9 +33,9 @@ defaultContentLanguage = "es"
   [[params.additional_menus]]
     title =  "QUIEN SOY YO"
     href =  "/about/"
-  friends = true
+  friends = false
   bookmarks = false
-  about_me = true
+  about_me = false
   [params.social]
   rss            = true 
   email          = "edgarga.bdn@gmail.com"
