@@ -163,28 +163,27 @@
 
 <script>
    document.addEventListener("DOMContentLoaded", function () {
-     const shareButton = document.getElementById("shareButton");
-     if (shareButton) {
-       shareButton.addEventListener("click", async () => {
-         const shareData = {
-           title: document.title,
-           text: "Mira este artículo:",
-           url: window.location.href
-         };
-         if (navigator.share) {
-           try {
-             await navigator.share(shareData);
-           } catch (err) {
-             console.warn("Error al compartir:", err);
-           }
-         } else {
-           navigator.clipboard.writeText(window.location.href);
-           alert("🔗 Enlace copiado al portapapeles");
-         }
-       });
-     }
+      const shareButton = document.getElementById("shareButton");
+      if (shareButton) {
+         shareButton.addEventListener("click", async () => {
+            const shareData = {
+               title: document.title,
+               text: "Mira este artículo:",
+               url: window.location.href
+            };
+            if (navigator.share) {
+               try {
+                  await navigator.share(shareData);
+               } catch (err) {
+                  console.warn("Error al compartir:", err);
+               }
+            } else {
+               navigator.clipboard.writeText(window.location.href);
+            }
+         });
+      }
    });
- </script>
+</script>
 <style type="text/css">
    header.intro-header {
       background-image: url('/img/stars5.jpeg')
@@ -202,95 +201,103 @@
    }
 
 
-   @media (max-width: 768px) {
+   @media only screen and (max-width:767px) {
       #shareButton {
          font-size: 1.6rem;
       }
+      
+   }
+   @media only screen and (min-width:768px) {
+      .share-post {
+         visibility: hidden;
+         display: none;
+      }
+      
    }
 </style>
 
-<header class="intro-header" >
-
-    <div class="container">
-        <div class="row">
+   <header class="intro-header">
+      
+      <div class="container">
+         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading"> 
-                    <div class="tags">
-                        
-                        <a class="tag" href="/tags/java" title="Java">
-                            Java
-                        </a>
-                        
-                    </div>
-                    
-                    <h1>¿Como será el Java del futuro?</h1>
-                    <h2 class="subheading"></h2>
-                    <span class="meta">
-                        
-                            Posteado por 
-                            
-                                Edgar Galcerán
-                             
-                            el 
-                            8 de noviembre de 2025
-                            
-                            
-                            
-                            
-                    </span>
-                    <div class="share-post">
+               <div class="post-heading">
+                  <div class="tags">
+                     
+                     <a class="tag" href="/%20/tags/java" title="Java">
+                        Java
+                     </a>
+                     
+                  </div>
+
+                  <h1>¿Como será el Java del futuro?</h1>
+                  <h2 class="subheading"></h2>
+                  <span class="meta">
+                     
+                     Posteado por
+                     
+                     Edgar Galcerán
+                     
+                     el
+                     8 de noviembre de 2025
+                     
+                     
+                     
+                     
+                  </span>
+                  <div class="share-post" style="">
                      <button id="shareButton" aria-label="Compartir este artículo" title="Compartir este artículo">
                         <i class="fa fa-share-alt"></i>
                      </button>
                   </div>
-                </div>
-               
+               </div>
+
             </div>
-        </div>
-    </div>
-</header>
-
-
-
-
-<article>
-   <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            <div class="tags">
-              
-              <a class="tag" href="/tags/java" title="Java">
-                Java
-              </a>
-              
-            </div>
-    
-            <h1>¿Como será el Java del futuro?</h1>
-            <h2 class="subheading"></h2>
-    
-            <span class="meta">
-              
-                Posteado por 
-                
-                  Edgar Galcerán
-                 
-                el 
-                8 de noviembre de 2025
-                
-                
-                
-              
-              
-            </span>
-    
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-</article>
+   </header>
+   
 
 
+   
+   <article>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+               <div class="post-heading">
+                  <div class="tags">
+                     
+                     <a class="tag" href="/%20/tags/java" title="Java">
+                        Java
+                     </a>
+                     
+                  </div>
+
+                  <h1>¿Como será el Java del futuro?</h1>
+                  <h2 class="subheading"></h2>
+
+                  <span class="meta">
+                     
+                     Posteado por
+                     
+                     Edgar Galcerán
+                     
+                     el
+                     8 de noviembre de 2025
+                     
+                     
+                     
+                     
+
+                  </span>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </article>
+
+   
 
 
 <footer>

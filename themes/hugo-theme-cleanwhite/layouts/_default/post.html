@@ -2,28 +2,27 @@
 <!-- Post Header -->
 <script>
    document.addEventListener("DOMContentLoaded", function () {
-     const shareButton = document.getElementById("shareButton");
-     if (shareButton) {
-       shareButton.addEventListener("click", async () => {
-         const shareData = {
-           title: document.title,
-           text: "Mira este artículo:",
-           url: window.location.href
-         };
-         if (navigator.share) {
-           try {
-             await navigator.share(shareData);
-           } catch (err) {
-             console.warn("Error al compartir:", err);
-           }
-         } else {
-           navigator.clipboard.writeText(window.location.href);
-           alert("🔗 Enlace copiado al portapapeles");
-         }
-       });
-     }
+      const shareButton = document.getElementById("shareButton");
+      if (shareButton) {
+         shareButton.addEventListener("click", async () => {
+            const shareData = {
+               title: document.title,
+               text: "Mira este artículo:",
+               url: window.location.href
+            };
+            if (navigator.share) {
+               try {
+                  await navigator.share(shareData);
+               } catch (err) {
+                  console.warn("Error al compartir:", err);
+               }
+            } else {
+               navigator.clipboard.writeText(window.location.href);
+            }
+         });
+      }
    });
- </script>
+</script>
 <style type="text/css">
    header.intro-header {
       background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
@@ -41,122 +40,132 @@
    }
 
 
-   @media (max-width: 768px) {
+   @media only screen and (max-width:767px) {
       #shareButton {
          font-size: 1.6rem;
       }
+      
+   }
+   @media only screen and (min-width:768px) {
+      .share-post {
+         visibility: hidden;
+         display: none;
+      }
+      
    }
 </style>
 {{ if eq .Params.headerstyle "text" }}
-<header class="intro-header style-text" >
-{{ else }}
-<header class="intro-header" >
-{{ end }}
-    <div class="container">
-        <div class="row">
+<header class="intro-header style-text">
+   {{ else }}
+   <header class="intro-header">
+      {{ end }}
+      <div class="container">
+         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading"> 
-                    <div class="tags">
-                        {{ range .Params.tags }}
-                        <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
-                            {{ . }}
-                        </a>
-                        {{ end }}
-                    </div>
-                    
-                    <h1>{{ .Title }}</h1>
-                    <h2 class="subheading">{{ .Params.subtitle }}</h2>
-                    <span class="meta">
-                        {{ if .Params.metadata }}
-                            {{ range $index, $element := .Params.metadata }}
-                                {{ if .link }}
-                                    <a href="{{ .link }}">{{ .text }}</a>
-                                {{ else }}
-                                    {{ .text }}
-                                {{ end }}
-                            {{ end }}
-                        {{ else }}
-                            Posteado por 
-                            {{ if .Params.author }}
-                                {{ .Params.author }}
-                            {{ else }}
-                                    {{ .Site.Title }}
-                            {{ end }} 
-                            el 
-                            {{ .Date | time.Format ":date_long" }}
-                            {{ if .Site.Params.page_view_counter }}
-                                {{ partial "page_view_counter.html" . }}
-                            {{ end }}
-                            <!-- Don't show "Última modificación el" if update happened on the same day. -->
-                            {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
-                            <br>Última modificación el {{ dateFormat | time.Format ":date_long"  .Params.LastMod }}
-                            {{ end }}
-                        {{ end }}    
-                    </span>
-                    <div class="share-post">
+               <div class="post-heading">
+                  <div class="tags">
+                     {{ range .Params.tags }}
+                     <a class="tag" href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+                        {{ . }}
+                     </a>
+                     {{ end }}
+                  </div>
+
+                  <h1>{{ .Title }}</h1>
+                  <h2 class="subheading">{{ .Params.subtitle }}</h2>
+                  <span class="meta">
+                     {{ if .Params.metadata }}
+                     {{ range $index, $element := .Params.metadata }}
+                     {{ if .link }}
+                     <a href="{{ .link }}">{{ .text }}</a>
+                     {{ else }}
+                     {{ .text }}
+                     {{ end }}
+                     {{ end }}
+                     {{ else }}
+                     Posteado por
+                     {{ if .Params.author }}
+                     {{ .Params.author }}
+                     {{ else }}
+                     {{ .Site.Title }}
+                     {{ end }}
+                     el
+                     {{ .Date | time.Format ":date_long" }}
+                     {{ if .Site.Params.page_view_counter }}
+                     {{ partial "page_view_counter.html" . }}
+                     {{ end }}
+                     <!-- Don't show "Última modificación el" if update happened on the same day. -->
+                     {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat
+                     "2006-01-02" .Date)))) }}
+                     <br>Última modificación el {{ dateFormat | time.Format ":date_long" .Params.LastMod }}
+                     {{ end }}
+                     {{ end }}
+                  </span>
+                  <div class="share-post" style="">
                      <button id="shareButton" aria-label="Compartir este artículo" title="Compartir este artículo">
                         <i class="fa fa-share-alt"></i>
                      </button>
                   </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-</header>
-{{ end }}
+               </div>
 
-{{ define "main" }}
-<!-- Post Content -->
-<article>
-   <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            <div class="tags">
-              {{ range .Params.tags }}
-              <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
-                {{ . }}
-              </a>
-              {{ end }}
             </div>
-    
-            <h1>{{ .Title }}</h1>
-            <h2 class="subheading">{{ .Params.subtitle }}</h2>
-    
-            <span class="meta">
-              {{ if .Params.metadata }}
-                {{ range $index, $element := .Params.metadata }}
-                  {{ if .link }}
-                    <a href="{{ .link }}">{{ .text }}</a>
-                  {{ else }}
-                    {{ .text }}
-                  {{ end }}
-                {{ end }}
-              {{ else }}
-                Posteado por 
-                {{ if .Params.author }}
-                  {{ .Params.author }}
-                {{ else }}
-                  {{ .Site.Title }}
-                {{ end }} 
-                el 
-                {{ .Date | time.Format ":date_long" }}
-                {{ if .Site.Params.page_view_counter }}
-                  {{ partial "page_view_counter.html" . }}
-                {{ end }}
-                <!-- No mostrar “Última modificación” si fue el mismo día -->
-                {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
-                <br>Última modificación el {{ dateFormat | time.Format ":date_long" .Params.LastMod }}
-                {{ end }}
-              {{ end }}
-              
-            </span>
-    
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-</article>
+   </header>
+   {{ end }}
 
-{{ end }} 
+   {{ define "main" }}
+   <!-- Post Content -->
+   <article>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+               <div class="post-heading">
+                  <div class="tags">
+                     {{ range .Params.tags }}
+                     <a class="tag" href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+                        {{ . }}
+                     </a>
+                     {{ end }}
+                  </div>
+
+                  <h1>{{ .Title }}</h1>
+                  <h2 class="subheading">{{ .Params.subtitle }}</h2>
+
+                  <span class="meta">
+                     {{ if .Params.metadata }}
+                     {{ range $index, $element := .Params.metadata }}
+                     {{ if .link }}
+                     <a href="{{ .link }}">{{ .text }}</a>
+                     {{ else }}
+                     {{ .text }}
+                     {{ end }}
+                     {{ end }}
+                     {{ else }}
+                     Posteado por
+                     {{ if .Params.author }}
+                     {{ .Params.author }}
+                     {{ else }}
+                     {{ .Site.Title }}
+                     {{ end }}
+                     el
+                     {{ .Date | time.Format ":date_long" }}
+                     {{ if .Site.Params.page_view_counter }}
+                     {{ partial "page_view_counter.html" . }}
+                     {{ end }}
+                     <!-- No mostrar “Última modificación” si fue el mismo día -->
+                     {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat
+                     "2006-01-02" .Date)))) }}
+                     <br>Última modificación el {{ dateFormat | time.Format ":date_long" .Params.LastMod }}
+                     {{ end }}
+                     {{ end }}
+
+                  </span>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </article>
+
+   {{ end }}
