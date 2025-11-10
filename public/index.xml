@@ -29,5 +29,12 @@
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;h1 id=&#34;quién-soy-yo&#34;&gt;¿Quién soy yo?&lt;/h1&gt;&#xA;&lt;p&gt;Hola, soy &lt;strong&gt;&lt;em&gt;Edgar Galcerán &amp;ldquo;Hefesto&amp;rdquo; Acosta&lt;/em&gt;&lt;/strong&gt;, un desarrollador de software especializado en &lt;strong&gt;Open Source&lt;/strong&gt;. Elegí como compañero de viaje profesional a &lt;strong&gt;Java&lt;/strong&gt;, una relación que al principio fue un tanto de amor y odio; irónicamente, como tantas cosas que he terminado disfrutando en mi vida personal.&lt;/p&gt;&#xA;&lt;p&gt;Mi pasión por la tecnología empezó bien pronto. En unas vacaciones al pueblo, mis padres decidieron darme una sorpresa (y sospecho que un &amp;ldquo;soborno&amp;rdquo; para callarme en un viaje de 7 horas) y me compraron una flamante Game Boy Color lila con su respectivo Pokémon Azul.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Posts Archive</title>
+      <link>http://localhost:1313/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archive/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

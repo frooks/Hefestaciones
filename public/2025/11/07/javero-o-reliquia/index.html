@@ -119,6 +119,8 @@
                     
                     
 		    
+                        <li><a href="/archive//">ARCHIVO</a></li>
+                    
                         <li><a href="/about/">QUIEN SOY YO</a></li>
                     
 		         
@@ -176,7 +178,7 @@
                   await navigator.share(shareData);
                } catch (err) {
                   console.warn("Error al compartir:", err);
-               }
+               }  
             } else {
                navigator.clipboard.writeText(window.location.href);
             }
@@ -205,14 +207,15 @@
       #shareButton {
          font-size: 1.6rem;
       }
-      
+
    }
+
    @media only screen and (min-width:768px) {
       .share-post {
          visibility: hidden;
          display: none;
       }
-      
+
    }
 </style>
 
@@ -259,45 +262,95 @@
    
 
 
-   
-   <article>
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-               <div class="post-heading">
-                  <div class="tags">
-                     
-                     <a class="tag" href="/%20/tags/java" title="Java">
-                        Java
-                     </a>
-                     
-                  </div>
 
-                  <h1>Javero ¿Reliquia o desarrollador de la posteridad?</h1>
-                  <h2 class="subheading"></h2>
+<article>
+    <div class="container">
+        <div class="row">
 
-                  <span class="meta">
-                     
-                     Posteado por
-                     
-                     Edgar Galcerán
-                     
-                     el
-                     7 de noviembre de 2025
-                     
-                     
-                     
-                     
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                  </span>
+                
+                <h1 id="desafios-retos-y-lo-que-no-te-cuentan">Desafios, retos y lo que no te cuentan</h1>
+<p>Pues raquel tiene una interesante opinión sobre lo que es ser Javero</p>
+<h2 id="quien-es-mastonto">Quien es mastonto?</h2>
+<h3 id="quien-es-mastonto-1">Quien es mastonto?</h3>
 
-               </div>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2025/11/08/futuro-de-java/" data-toggle="tooltip" data-placement="top" title="¿Como será el Java del futuro?">Siguiente
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+
             </div>
-         </div>
-      </div>
-   </article>
 
-   
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">¿QUÉ ME DICES?</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="tags/">POSTS POR CATEGORIA</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/java" title="java">
+                            java
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
 
 
 <footer>

@@ -24,9 +24,9 @@ defaultContentLanguage = "es"
   upstreamAttribution = false
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer" 
   sidebar_avatar = "/img/post-bg-unix-linux.jpg"      
-  #[[params.additional_menus]]
-    #title =  "ARCHIVE"
-    #href =  "/archive/"
+  [[params.additional_menus]]
+    title =  "ARCHIVO"
+    href =  "/archive/"
   #[[params.additional_menus]]
     #title =  "NOTES"
     #href =  "/notes/"

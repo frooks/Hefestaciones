@@ -119,6 +119,8 @@
                     
                     
 		    
+                        <li><a href="/archive//">ARCHIVO</a></li>
+                    
                         <li><a href="/about/">QUIEN SOY YO</a></li>
                     
 		         
@@ -176,7 +178,7 @@
                   await navigator.share(shareData);
                } catch (err) {
                   console.warn("Error al compartir:", err);
-               }
+               }  
             } else {
                navigator.clipboard.writeText(window.location.href);
             }
@@ -205,9 +207,15 @@
       #shareButton {
          font-size: 1.6rem;
       }
+
+   }
+
+   @media only screen and (min-width:768px) {
       .share-post {
+         visibility: hidden;
          display: none;
       }
+
    }
 </style>
 
@@ -236,7 +244,7 @@
                      
                      
                   </span>
-                  <div class="share-post" style="display: none;">
+                  <div class="share-post" style="">
                      <button id="shareButton" aria-label="Compartir este artículo" title="Compartir este artículo">
                         <i class="fa fa-share-alt"></i>
                      </button>
@@ -250,41 +258,80 @@
    
 
 
-   
-   <article>
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-               <div class="post-heading">
-                  <div class="tags">
-                     
-                  </div>
 
-                  <h1>Posts</h1>
-                  <h2 class="subheading"></h2>
+<article>
+    <div class="container">
+        <div class="row">
 
-                  <span class="meta">
-                     
-                     Posteado por
-                     
-                     Hefestaciones
-                     
-                     el
-                     8 de noviembre de 2025
-                     
-                     
-                     
-                     
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                  </span>
+                
+                
 
-               </div>
+                
+
+                
+
+                
+
+
+
+
             </div>
-         </div>
-      </div>
-   </article>
 
-   
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">¿QUÉ ME DICES?</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="tags/">TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/java" title="java">
+                            java
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
 
 
 <footer>
