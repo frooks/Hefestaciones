@@ -65,7 +65,7 @@
                <div class="post-heading">
                   <div class="tags">
                      {{ range .Params.tags }}
-                     <a class="tag" href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+                     <a class="tag" href="{{ "tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
                         {{ . }}
                      </a>
                      {{ end }}
