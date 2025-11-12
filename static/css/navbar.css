@@ -23,3 +23,11 @@ th {
 .tags {
    text-transform: capitalize;
 }
+
+.intro-header {
+   background-position-y: 56.3%
+}
+
+.subheading {
+   font-weight: 555;
+}
