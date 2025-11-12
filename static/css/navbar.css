@@ -25,9 +25,11 @@ th {
 }
 
 .intro-header {
-   background-position-y: 56.3%
+   background-position-y: 56.8%;
+   
 }
 
 .subheading {
-   font-weight: 555;
+   font-size: 2.22rem!important;
+   
 }
