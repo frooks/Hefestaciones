@@ -222,7 +222,7 @@
     {{ if .Site.Params.featured_tags }}
     <section>
         <hr class="hidden-sm hidden-xs">
-        <h5>POSTS POR CATEGORIA</h5>
+        <h5><a href="/tags/">POSTS POR CATEGORIA</a></h5>
         <div class="tags">
             {{ $featured_condition_size := .Site.Params.featured_condition_size }}
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}

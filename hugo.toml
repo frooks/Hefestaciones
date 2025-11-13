@@ -11,18 +11,18 @@ defaultContentLanguage = "es"
     languageName = "Español"
     weight = 1
 [params]
-  image_404 = "/img/seaCoast.jpg"
+  image_404 = "/img/404.jpg"
   title_404 = "Parece que no hay nada aquí :("
-  featured_tags = true 
+  featured_tags = true
   featured_condition_size = 1 
   # Include any custom CSS and/or JS files, url or relative to /static folder
   custom_css = ["css/navbar.css"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
-  header_image = "/img/home-bg-unix-linux.png"
+  header_image = "/img/lakeN.jpg"
   SEOTitle = "Recomendaciones y reflexiones de un cibersurfeador"
   description = "Recomendaciones y reflexiones de un cibersurfeador"
   keyword = "Aprender Java Barcelona, Aprender Java Madrid, Recomendaciones Tech"
-  slogan = "¡Si lo ves aquí es porque es bueno!"
+  slogan = "¡Ad astra, per aspera!"
   upstreamAttribution = false
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer" 
   sidebar_avatar = "/img/post-bg-unix-linux.jpg"      
